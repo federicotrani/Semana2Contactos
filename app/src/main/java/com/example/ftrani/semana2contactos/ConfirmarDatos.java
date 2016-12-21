@@ -49,11 +49,11 @@ public class ConfirmarDatos extends AppCompatActivity {
                 //objeto que vincula las activity origen y destino
                 Intent intent = new Intent(ConfirmarDatos.this, MainActivity.class);
 
-                intent.putExtra(getResources().getString(R.string.pnombre), tvNombre.getText());
-                intent.putExtra(getResources().getString(R.string.ptelefono), tvTelefono.getText());
-                intent.putExtra(getResources().getString(R.string.pemail), tvEmail.getText());
-                intent.putExtra(getResources().getString(R.string.pdescripcion), tvDescripcion.getText());
-                intent.putExtra(getResources().getString(R.string.pfecha), tvFecha.getText());
+                intent.putExtra(getResources().getString(R.string.pnombre), tvNombre.getText().toString());
+                intent.putExtra(getResources().getString(R.string.ptelefono), tvTelefono.getText().toString());
+                intent.putExtra(getResources().getString(R.string.pemail), tvEmail.getText().toString());
+                intent.putExtra(getResources().getString(R.string.pdescripcion), tvDescripcion.getText().toString());
+                intent.putExtra(getResources().getString(R.string.pfecha), tvFecha.getText().toString());
 
                 startActivity(intent);
                 finish();
