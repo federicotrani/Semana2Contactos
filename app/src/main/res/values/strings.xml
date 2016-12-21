@@ -5,6 +5,9 @@
     <string name="ptelefono">Telefono</string>
     <string name="pemail">Email</string>
     <string name="pdescripcion">Descripcion</string>
+    <string name="pdia">Dia</string>
+    <string name="pmes">Mes</string>
+    <string name="panio">Anio</string>
     <string name="hint_nombre">Nombre completo</string>
     <string name="hint_fecha">Fecha de Nacimiento</string>
     <string name="hint_telefono">Telefono</string>
