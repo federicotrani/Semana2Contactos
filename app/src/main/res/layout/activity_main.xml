@@ -16,7 +16,7 @@
         android:id="@+id/edtNombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nombre completo"/>
+        android:hint="@string/hint_nombre"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -27,13 +27,13 @@
             android:id="@+id/btnSetFecha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Set Fecha" />
+            android:text="@string/boton_fecha"/>
 
         <EditText
             android:id="@+id/edtFecha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Fecha Nacimiento"/>
+            android:hint="@string/hint_fecha"/>
 
 
     </LinearLayout>
@@ -42,27 +42,29 @@
     android:id="@+id/edtTelefono"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:hint="Telefono"/>
+    android:hint="@string/hint_telefono"/>
 
 
     <EditText
         android:id="@+id/edtEmail"
+        android:inputType="textEmailAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Email"/>
+        android:hint="@string/hint_email"/>
 
 
 <EditText
     android:id="@+id/edtDescripcion"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:hint="Descripción Contacto"/>
+    android:hint="@string/hint_descripcion"/>
 
     <Button
         android:id="@+id/btnSiguiente"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Siguiente"
+        android:text="@string/boton_siguiente"
+        android:onClick="abrirContacto"
         />
 
 </LinearLayout>

@@ -5,4 +5,11 @@
     <string name="ptelefono">Telefono</string>
     <string name="pemail">Email</string>
     <string name="pdescripcion">Descripcion</string>
+    <string name="hint_nombre">Nombre completo</string>
+    <string name="hint_fecha">Fecha de Nacimiento</string>
+    <string name="hint_telefono">Telefono</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_descripcion">Descripción Contacto</string>
+    <string name="boton_fecha">Set Fecha</string>
+    <string name="boton_siguiente">Siguiente</string>
 </resources>

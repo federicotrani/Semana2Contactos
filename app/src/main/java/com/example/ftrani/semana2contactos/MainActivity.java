@@ -20,11 +20,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btnSiguiente = (Button) findViewById(R.id.btnSiguiente);
-        btnSiguiente.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
+        edtNombre = (EditText) findViewById(R.id.edtNombre);
+        edtFecha = (EditText) findViewById(R.id.edtFecha);
+        edtTelefono = (EditText) findViewById(R.id.edtTelefono);
+        edtEmail = (EditText) findViewById(R.id.edtEmail);
+        edtDescripcion = (EditText) findViewById(R.id.edtDescripcion);
+
+    }
+
+    protected void abrirContacto(View v){
+
                 //objeto que vincula las activity origen y destino
-                Intent intent = new Intent(MainActivity.this, ConfirmarDatos.class);
+                Intent intent = new Intent(this, ConfirmarDatos.class);
+
 
                 intent.putExtra(getResources().getString(R.string.pnombre), edtNombre.getText());
                 intent.putExtra(getResources().getString(R.string.ptelefono),edtTelefono.getText());
@@ -34,8 +42,6 @@ public class MainActivity extends AppCompatActivity {
 
                 startActivity(intent);
                 finish();
-            }
-        });
 
     }
 
