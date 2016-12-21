@@ -21,25 +21,27 @@ public class ConfirmarDatos extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_confirmar_datos);
 
-        //objeto para almacenar parametros pasados en el intent
-        Bundle parametros = getIntent().getExtras();
-        String nombre = parametros.getString(getResources().getString(R.string.pnombre));
-        String telefono = parametros.getString(getResources().getString(R.string.ptelefono));
-        String email = parametros.getString(getResources().getString(R.string.pemail));
-        String descripcion = parametros.getString(getResources().getString(R.string.pdescripcion));
-        String fecha = parametros.getString(getResources().getString(R.string.pfecha));
+        Bundle p = getIntent().getExtras();
+
+        String nombre = p.getString(getResources().getString(R.string.pnombre));
+
+        String telefono = p.getString(getResources().getString(R.string.ptelefono));
+        String email = p.getString(getResources().getString(R.string.pemail));
+        String descripcion = p.getString(getResources().getString(R.string.pdescripcion));
+        String fecha = p.getString(getResources().getString(R.string.pfecha));
 
         tvNombre = (TextView) findViewById(R.id.tvNombre);
-        tvTelefono = (TextView) findViewById(R.id.tvTelefono);
-        tvEmail = (TextView) findViewById(R.id.tvEmail);
         tvDescripcion = (TextView) findViewById(R.id.tvDescripcion);
+        tvEmail = (TextView) findViewById(R.id.tvEmail);
+        tvTelefono = (TextView) findViewById(R.id.tvTelefono);
         tvFecha = (TextView) findViewById(R.id.tvFecha);
 
         tvNombre.setText(nombre);
+        tvDescripcion.setText(descripcion);
         tvTelefono.setText(telefono);
         tvEmail.setText(email);
-        tvDescripcion.setText(descripcion);
         tvFecha.setText(fecha);
+
 
         Button btnEditar = (Button) findViewById(R.id.btnEditar);
         btnEditar.setOnClickListener(new View.OnClickListener() {

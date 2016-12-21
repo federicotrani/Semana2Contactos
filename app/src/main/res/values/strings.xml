@@ -12,4 +12,6 @@
     <string name="hint_descripcion">Descripción Contacto</string>
     <string name="boton_fecha">Set Fecha</string>
     <string name="boton_siguiente">Siguiente</string>
+    <string name="boton_confirmar">Editar Datos</string>
+    <string name="titulo_confirmar">Confirmar Datos</string>
 </resources>

@@ -33,12 +33,12 @@ public class MainActivity extends AppCompatActivity {
                 //objeto que vincula las activity origen y destino
                 Intent intent = new Intent(this, ConfirmarDatos.class);
 
-
-                intent.putExtra(getResources().getString(R.string.pnombre), edtNombre.getText());
-                intent.putExtra(getResources().getString(R.string.ptelefono),edtTelefono.getText());
-                intent.putExtra(getResources().getString(R.string.pemail),edtEmail.getText());
-                intent.putExtra(getResources().getString(R.string.pdescripcion),edtDescripcion.getText());
-                intent.putExtra(getResources().getString(R.string.pfecha),edtFecha.getText());
+                //intent.putExtra(getResources().getString(R.string.pnombre), edtNombre.getText());
+                intent.putExtra(getResources().getString(R.string.pnombre), edtNombre.getText().toString());
+                intent.putExtra(getResources().getString(R.string.ptelefono),edtTelefono.getText().toString());
+                intent.putExtra(getResources().getString(R.string.pemail),edtEmail.getText().toString());
+                intent.putExtra(getResources().getString(R.string.pdescripcion),edtDescripcion.getText().toString());
+                intent.putExtra(getResources().getString(R.string.pfecha),edtFecha.getText().toString());
 
                 startActivity(intent);
                 finish();
