@@ -24,7 +24,6 @@ public class ConfirmarDatos extends AppCompatActivity {
         Bundle p = getIntent().getExtras();
 
         String nombre = p.getString(getResources().getString(R.string.pnombre));
-
         String telefono = p.getString(getResources().getString(R.string.ptelefono));
         String email = p.getString(getResources().getString(R.string.pemail));
         String descripcion = p.getString(getResources().getString(R.string.pdescripcion));
@@ -37,27 +36,25 @@ public class ConfirmarDatos extends AppCompatActivity {
         tvFecha = (TextView) findViewById(R.id.tvFecha);
 
         tvNombre.setText(nombre);
-        tvDescripcion.setText(descripcion);
-        tvTelefono.setText(telefono);
-        tvEmail.setText(email);
-        tvFecha.setText(fecha);
+        tvDescripcion.setText("Descripción: "+descripcion);
+        tvTelefono.setText("Tel: "+telefono);
+        tvEmail.setText("Email: "+email);
+        tvFecha.setText("Fecha Nacimiento: "+fecha);
+
+    }
 
 
-        Button btnEditar = (Button) findViewById(R.id.btnEditar);
-        btnEditar.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                //objeto que vincula las activity origen y destino
-                Intent intent = new Intent(ConfirmarDatos.this, MainActivity.class);
+    protected void abrirEditar(View v){
+        //objeto que vincula las activity origen y destino
+        Intent intent = new Intent(this, MainActivity.class);
 
-                intent.putExtra(getResources().getString(R.string.pnombre), tvNombre.getText().toString());
-                intent.putExtra(getResources().getString(R.string.ptelefono), tvTelefono.getText().toString());
-                intent.putExtra(getResources().getString(R.string.pemail), tvEmail.getText().toString());
-                intent.putExtra(getResources().getString(R.string.pdescripcion), tvDescripcion.getText().toString());
-                intent.putExtra(getResources().getString(R.string.pfecha), tvFecha.getText().toString());
+        intent.putExtra(getResources().getString(R.string.pnombre), tvNombre.getText().toString());
+        intent.putExtra(getResources().getString(R.string.ptelefono), tvTelefono.getText().toString());
+        intent.putExtra(getResources().getString(R.string.pemail), tvEmail.getText().toString());
+        intent.putExtra(getResources().getString(R.string.pdescripcion), tvDescripcion.getText().toString());
+        intent.putExtra(getResources().getString(R.string.pfecha), tvFecha.getText().toString());
 
-                startActivity(intent);
-                finish();
-            }
-        });
+        startActivity(intent);
+        finish();
     }
 }

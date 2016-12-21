@@ -26,6 +26,25 @@ public class MainActivity extends AppCompatActivity {
         edtEmail = (EditText) findViewById(R.id.edtEmail);
         edtDescripcion = (EditText) findViewById(R.id.edtDescripcion);
 
+        //capturo parametros de activity previa
+        if(getIntent().getExtras()!=null){
+
+            Bundle p = getIntent().getExtras();
+
+            String nombre = p.getString(getResources().getString(R.string.pnombre));
+            String telefono = p.getString(getResources().getString(R.string.ptelefono));
+            String email = p.getString(getResources().getString(R.string.pemail));
+            String descripcion = p.getString(getResources().getString(R.string.pdescripcion));
+            String fecha = p.getString(getResources().getString(R.string.pfecha));
+
+            //asigno parametros a controles de edición
+            edtNombre.setText(nombre);
+            edtFecha.setText(fecha);
+            edtTelefono.setText(telefono);
+            edtEmail.setText(email);
+            edtDescripcion.setText(descripcion);
+        }
+
     }
 
     protected void abrirContacto(View v){

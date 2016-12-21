@@ -48,5 +48,6 @@
         android:id="@+id/btnEditar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/boton_confirmar"/>
+        android:text="@string/boton_confirmar"
+        android:onClick="abrirEditar"/>
 </LinearLayout>
